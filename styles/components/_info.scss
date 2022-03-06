@@ -1,0 +1,70 @@
+#info {
+  color: #111111bf;
+  h3 {
+    font-size: 3rem;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+  }
+  .info__content {
+    display: flex;
+    justify-content: space-between;
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .info__mapa {
+      width: 50%;
+      @include respond(tab-port) {
+        height: 40rem;
+        width: 100%;
+      }
+    }
+    .info__kontakt {
+      width: 50%;
+      padding: 0rem 5rem;
+      @include respond(tab-port) {
+        width: 100%;
+        padding: 5rem 10rem;
+      }
+      @include respond(phone) {
+        width: 100%;
+        padding: 5rem 5rem;
+      }
+    }
+  }
+  #map {
+    max-width: 100%;
+    height: 100%;
+  }
+  .leaflet-popup {
+    margin-bottom: -16px;
+  }
+  .leaflet-marker-pane,
+  .leaflet-marker-pane {
+    display: none;
+  }
+  .leaflet-popup-content {
+    font-size: 2rem;
+  }
+  .leaflet-popup-content-wrapper {
+    border-radius: 0px;
+  }
+  .info__add {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0rem 0rem;
+    @include respond(tab-port) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0rem 10rem;
+    }
+    @include respond(phone) {
+      padding: 0rem 5rem;
+    }
+  }
+  .hading-add {
+    text-align: center;
+    padding: 5rem 0rem;
+  }
+}

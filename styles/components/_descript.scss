@@ -1,0 +1,9 @@
+#descript {
+  padding: 0 10rem;
+  padding-bottom: 10rem;
+  color: $color-black;
+  @include respond(phone) {
+    padding: 0 5rem;
+    padding-bottom: 5rem;
+  }
+}

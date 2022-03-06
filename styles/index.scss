@@ -1,0 +1,30 @@
+//ABSTRTACTS
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+//BASE
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+//LAYOUT
+@import "layouts/grid-float/grid-float";
+@import "layouts/container";
+@import "layouts/header";
+@import "layouts/navigation";
+@import "layouts/main";
+@import "layouts/footer";
+
+//PAGES
+
+//COMPONENTS
+@import "./components/background";
+@import "./components/descript";
+@import "./components/news";
+@import "./components/btn-9";
+@import "./components/gallery-nav";
+@import "./components/gallery";
+@import "./components/offer";
+@import "./components/info";
+@import "./components/ham-1";
+@import "./components/free-school";

@@ -1,0 +1,9 @@
+main {
+  padding-bottom: 10rem;
+  @include respond(tab-port) {
+    padding-bottom: 10rem;
+  }
+  @include respond(phone) {
+    padding-bottom: 5rem;
+  }
+}

@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "editorial-new-200";
+  src: url("../../fonts/Editorial-New-Ultralight-200.woff") format("woff");
+}
+@font-face {
+  font-family: "editorial-new-400";
+  src: url("../../fonts/Editorial-New-Regular-400.woff") format("woff");
+}
+@font-face {
+  font-family: "editorial-new-800";
+  src: url("../../fonts/Editorial-New-Ultrabold-800.woff") format("woff");
+}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Khand:wght@300;600&display=swap");
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: $default-font-size;
+  font-weight: 400;
+  line-height: 1.5;
+  color: color-black;
+}
+.heading--slider {
+  font-size: 9rem;
+  font-family: "Khand", sans-serif;
+  font-weight: 600;
+  color: $color-blue;
+  text-align: right;
+  @include respond(tab-port) {
+    text-align: center;
+  }
+  @include respond(phone) {
+    font-size: 7rem;
+  }
+}
+.heading--slider--second {
+  font-size: 2rem;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  text-align: right;
+  @include respond(tab-port) {
+    text-align: center;
+  }
+}
+.heading--section {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  padding: 10rem 10rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: #fff;
+  letter-spacing: 2px;
+  span {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(41, 152, 255, 0.85),
+      rgba(86, 67, 250, 0.85)
+    );
+    padding: 2rem 2rem 1rem 2rem;
+  }
+  @include respond(phone) {
+    padding: 5rem;
+  }
+}
+.heading--section--type-2 {
+  font-family: "Khand", sans-serif;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3rem;
+  background: rgba(41, 152, 255);
+  padding: 1rem;
+  // box-shadow: inset 0px 40px 50px $color-purple,
+  //   inset 0px -5px 5px $color-purple;
+  padding-bottom: 1rem;
+  @include respond(phone) {
+    font-size: 3rem;
+  }
+}
+p {
+  font-size: $default-font-size;
+  // &:not(:last-child) {
+  //   margin-bottom: 3rem;
+  // }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button span {
+  font-family: "editorial-new-200";
+}
+.bold {
+  font-weight: 600;
+}

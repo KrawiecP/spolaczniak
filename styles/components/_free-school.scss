@@ -1,0 +1,43 @@
+.free-school {
+  background-color: red;
+  display: inline-block;
+  padding: 3rem;
+  font-size: 4rem;
+  animation-timing-function: step-end;
+  color: #fff;
+  outline: 2px solid #fff;
+  outline-offset: -10px;
+  z-index: 2;
+  animation: pulsing 5s ease-in-out infinite;
+  @include respond(phone) {
+    left: auto;
+    top: auto;
+  }
+}
+@keyframes pulsing {
+  0% {
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+  }
+}
+@keyframes pulsing2 {
+  0% {
+  }
+  50% {
+    transform: translate(0, -50%) scale(1.2);
+  }
+  100% {
+  }
+}
+@keyframes pulsing3 {
+  0% {
+  }
+  50% {
+    transform: translate(-50%, 0) scale(1.2);
+  }
+  100% {
+  }
+}

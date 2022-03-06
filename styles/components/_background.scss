@@ -1,0 +1,131 @@
+$white: #ffffff;
+$blue: #2998ff;
+.background {
+  @include respond(phone) {
+    display: none;
+  }
+  width: 100%;
+}
+.svg {
+  stroke: $white;
+  fill: $white;
+  @include respond(tab-land) {
+    stroke: $blue;
+    fill: $blue;
+  }
+  position: absolute;
+  bottom: -100vh;
+  transform-style: preserve-3d;
+}
+
+$total: 18;
+@for $i from 1 through $total {
+  @if ($i%2==0) {
+    .svg:nth-child(#{$i}) {
+      left: random(5) * 1% - 5;
+      @include respond(big-land) {
+        left: random(5) * 1% - 10;
+      }
+      animation: raise#{$i} 13 + random(8) + s ease-out infinite;
+      animation-delay: random(9) - 5 + s;
+      transform: scale(0.01) rotate(random(360) + deg);
+      filter: blur(1px);
+      opacity: 0.5;
+
+      @keyframes raise#{$i} {
+        to {
+          bottom: 105vh;
+          left: random(16) * 1% - 8;
+          transform: scale(0.7) rotate(random(620) + 100 + deg);
+          opacity: 0;
+        }
+      }
+      @include respond(big-land) {
+        @keyframes raise#{$i} {
+          65% {
+            opacity: 0.4;
+          }
+          75% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 0;
+            bottom: 105vh;
+            left: random(3) * 1% - 10;
+            transform: scale(0.4) rotate(random(920) + 100 + deg);
+          }
+        }
+      }
+      @include respond(tab-land) {
+        @keyframes raise#{$i} {
+          65% {
+            opacity: 0.4;
+          }
+          75% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 0;
+            bottom: 105vh;
+            left: random(3) * 1% - 10;
+            transform: scale(0.6) rotate(random(920) + 100 + deg);
+          }
+        }
+      }
+    }
+  }
+  @if ($i%2==1) {
+    .svg:nth-child(#{$i}) {
+      right: random(5) * 1% - 5;
+      @include respond(big-land) {
+        right: random(5) * 1% - 10;
+      }
+      animation: raise#{$i} 13 + random(8) + s ease-out infinite;
+      animation-delay: random(9) - 5 + s;
+      transform: scale(0.01) rotate(random(360) + deg);
+      filter: blur(1px);
+      opacity: 0.5;
+
+      @keyframes raise#{$i} {
+        to {
+          bottom: 105vh;
+          right: random(16) * 1% - 8;
+          transform: scale(0.7) rotate(random(620) + 100 + deg);
+          opacity: 0;
+        }
+      }
+      @include respond(big-land) {
+        @keyframes raise#{$i} {
+          65% {
+            opacity: 0.4;
+          }
+          75% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 0;
+            bottom: 105vh;
+            right: random(3) * 1% - 10;
+            transform: scale(0.4) rotate(random(920) + 100 + deg);
+          }
+        }
+      }
+      @include respond(tab-land) {
+        @keyframes raise#{$i} {
+          65% {
+            opacity: 0.4;
+          }
+          75% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 0;
+            bottom: 105vh;
+            right: random(3) * 1% - 10;
+            transform: scale(0.6) rotate(random(920) + 100 + deg);
+          }
+        }
+      }
+    }
+  }
+}

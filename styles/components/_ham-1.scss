@@ -1,0 +1,35 @@
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+  width: 5rem;
+  z-index: 5000;
+  background: none;
+  cursor: pointer;
+  &:before,
+  &:after,
+  & div {
+    background: #055cff;
+    content: "";
+    display: block;
+    height: 0.5rem;
+    margin: 0.7rem 0;
+    transition: 0.5s;
+  }
+
+  &__close {
+    &:before {
+      transform: translateY(1.2rem) rotate(135deg);
+    }
+    &:after {
+      transform: translateY(-1.2rem) rotate(-135deg);
+    }
+    & div {
+      transform: scale(0);
+    }
+  }
+  @include respond(phone) {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,196 @@
+#news {
+  .swiper-wrapper {
+    padding: 5rem 0rem 10rem 0rem !important;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 3rem;
+    z-index: 100;
+  }
+  .swiper-pagination-progressbar-fill {
+    background-color: #4936e7;
+  }
+  .swiper-pagination-progressbar {
+    background-color: #2998ff;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+  .content {
+    text-align: center;
+  }
+  .card {
+    position: relative;
+    border-radius: 10px;
+  }
+  //SECOND OPT
+  .card .icon {
+    background-position: center !important;
+    background-size: cover !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: #f00;
+    transition: 0.7s;
+    z-index: 1;
+  }
+  .card .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.7s;
+    color: #fff;
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.7s;
+    color: #fff;
+  }
+
+  .card .face {
+    width: 30rem;
+    height: 30rem;
+    transition: 0.5s;
+    @include respond(tab-port) {
+      width: 35rem;
+      height: 35rem;
+    }
+  }
+
+  .card .face.face1 {
+    position: relative;
+    // background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(0px);
+    //move style
+    // transform: translateY(100px);
+  }
+
+  .card:hover .face.face1 {
+    transform: translateY(0px);
+  }
+
+  .card .face.face1 .content {
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .card:hover .face.face1 .content {
+    opacity: 1;
+  }
+
+  .face.face1 .content i {
+    max-width: 100px;
+  }
+
+  .card .face.face2 {
+    scrollbar-gutter: stable;
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(0);
+    display: flex;
+    flex-direction: column-reverse;
+    //move style
+    // transform: translateY(-20rem);
+    @include respond(tab-land) {
+      // transform: translateY(-19rem);
+    }
+    @include respond(tab-port) {
+      // transform: translateY(-22.5rem);
+    }
+  }
+  .card:hover .face.face2 {
+    transform: translateY(0);
+  }
+
+  .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    // color: #414141;
+  }
+
+  .card .face.face2 .content h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    // color: #414141;
+  }
+
+  a {
+    text-decoration: none;
+    // color: #414141;
+  }
+
+  .card-1__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    bottom: 3rem;
+    right: 1.5rem;
+    width: 80%;
+  }
+  .card-1__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    margin-right: -1.5rem;
+  }
+  .card-1__heading-span--1 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(41, 152, 255, 0.85),
+      rgba(86, 67, 250, 0.85)
+    );
+  }
+  .news__text {
+    padding-bottom: 2rem !important;
+  }
+
+  .news-1 {
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+  .news-2,
+  .news-3 {
+    display: none;
+  }
+  .news-2 {
+    @include respond(tab-port) {
+      display: block;
+    }
+    @include respond(phone) {
+      display: none;
+    }
+  }
+  .news-3 {
+    @include respond(phone) {
+      display: block;
+    }
+  }
+}

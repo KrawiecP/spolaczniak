@@ -1,0 +1,43 @@
+#gallery {
+  .swiper {
+    width: 100%;
+    padding: 5rem 0rem;
+    overflow-x: hidden;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 35rem;
+    height: 35rem;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+  .swiper-pagination {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5rem;
+    @include respond(phone) {
+      justify-content: center;
+    }
+  }
+  .swiper-pagination-bullet {
+    width: 3rem !important;
+    height: 3rem !important;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0 !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    color: #fff;
+    background: $color-blue !important;
+  }
+}
