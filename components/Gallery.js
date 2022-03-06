@@ -22,6 +22,7 @@ export default function Gallery({
           {" "}
           <Swiper
             effect={"coverflow"}
+            initialSlide="1"
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={"auto"}
