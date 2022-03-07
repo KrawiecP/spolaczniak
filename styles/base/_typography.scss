@@ -22,6 +22,19 @@ body {
   color: color-black;
 }
 .heading--slider {
+  font-size: 7rem;
+  font-family: "Khand", sans-serif;
+  font-weight: 600;
+  color: $color-blue;
+  text-align: right;
+  @include respond(tab-port) {
+    text-align: center;
+  }
+  @include respond(phone) {
+    font-size: 7rem;
+  }
+}
+.heading--slider--biger {
   font-size: 9rem;
   font-family: "Khand", sans-serif;
   font-weight: 600;
@@ -98,4 +111,17 @@ button span {
 }
 .bold {
   font-weight: 600;
+}
+.other-links {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 30%;
+  padding-bottom: 11%;
+}
+.facebook {
+  background-image: url(/facebook.jpg);
+}
+.vulcan {
+  background-image: url(/vulcan.png);
 }

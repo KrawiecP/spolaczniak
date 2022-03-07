@@ -1,7 +1,7 @@
 main {
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
   @include respond(tab-port) {
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
   }
   @include respond(phone) {
     padding-bottom: 5rem;

@@ -118,7 +118,7 @@ export async function getStaticProps() {
   );
   const strapi8 = await res8.json();
   const res9 = await fetch(
-    "https://szkolaspoleczna.herokuapp.com/api/slajdies"
+    "https://szkolaspoleczna.herokuapp.com/api/slajdies?sort[0]=id"
   );
   const strapi9 = await res9.json();
   const res10 = await fetch(
@@ -138,6 +138,6 @@ export async function getStaticProps() {
       slajdy: strapi9.data,
       opis: strapi10.data,
     },
-    revalidate: 60,
+    revalidate: 30,
   };
 }

@@ -39,7 +39,7 @@ export default function Header({ rekrutacja, podstawowa, liceum, slajdy }) {
               </h2>
             </div> */}
             <div className="slide__item rekrutacja-tytul">
-              <h1 className="heading--slider">Rekrutacja</h1>
+              <h1 className="heading--slider--biger">Rekrutacja</h1>
               <h2 className="heading--slider--second">
                 {slajdy[0].attributes.dopisek}
               </h2>
@@ -55,7 +55,9 @@ export default function Header({ rekrutacja, podstawowa, liceum, slajdy }) {
               <img src="/uczen.png"></img>
             </div>
             <div className="slide__item">
-              <h1 className="heading--slider">Szkoła Podstawowa</h1>
+              <h1 className="heading--slider">
+                II Społeczna Szkoła Podstawowa
+              </h1>
               <h2 className="heading--slider--second">
                 {slajdy[1].attributes.dopisek}
               </h2>
@@ -69,10 +71,24 @@ export default function Header({ rekrutacja, podstawowa, liceum, slajdy }) {
             </div>
             <div className="slide__item">
               <h1 className="heading--slider">
-                Liceum <span className="ogolniak">Ogólnokształcące</span>
+                Społeczne Liceum{" "}
+                <span className="ogolniak">Ogólnokształcące</span>
               </h1>
               <h2 className="heading--slider--second">
                 {slajdy[2].attributes.dopisek}
+              </h2>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="slide slide--1">
+            <div className="slide__item-1 trio">
+              <img src="/team.png"></img>
+            </div>
+            <div className="slide__item">
+              <h1 className="heading--slider--biger">Społeczne Technikum</h1>
+              <h2 className="heading--slider--second">
+                {slajdy[6].attributes.dopisek}
               </h2>
             </div>
           </div>
@@ -83,7 +99,7 @@ export default function Header({ rekrutacja, podstawowa, liceum, slajdy }) {
               <img src="/informatyk.png"></img>
             </div>
             <div className="slide__item">
-              <h1 className="heading--slider">Technik Informatyk</h1>
+              <h1 className="heading--slider--biger">Technik Informatyk</h1>
               <h2 className="heading--slider--second">
                 {slajdy[3].attributes.dopisek}
               </h2>
@@ -96,7 +112,7 @@ export default function Header({ rekrutacja, podstawowa, liceum, slajdy }) {
               <img src="/mechanik.png"></img>
             </div>
             <div className="slide__item">
-              <h1 className="heading--slider">Technik Mechanik</h1>
+              <h1 className="heading--slider--biger">Technik Mechanik</h1>
               <h2 className="heading--slider--second">
                 {slajdy[4].attributes.dopisek}
               </h2>
@@ -109,7 +125,7 @@ export default function Header({ rekrutacja, podstawowa, liceum, slajdy }) {
               <img src="/kucharz.png"></img>
             </div>
             <div className="slide__item">
-              <h1 className="heading--slider">
+              <h1 className="heading--slider--biger">
                 Technik<br></br> Technologii<br></br> Żywności{" "}
               </h1>
               <h2 className="heading--slider--second">

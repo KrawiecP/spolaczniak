@@ -33,6 +33,19 @@ export default function Info({ kontakt, wykaz }) {
             );
           })}
         </div>
+        <h3 className="hading-add">Pozostałe przydatne linki</h3>
+        <div className="info__add--2">
+          <a
+            className="other-links facebook"
+            href="https://www.facebook.com/zsspip"
+            target="_blank"
+          ></a>
+          <a
+            className="other-links vulcan"
+            href="https://uonetplus.vulcan.net.pl/powiatslupski"
+            target="_blank"
+          ></a>
+        </div>
       </section>
       <Script
         strategy="beforeInteractive"
