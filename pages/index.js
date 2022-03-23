@@ -78,7 +78,9 @@ export default function Home({
           <Info kontakt={kontakt} wykaz={wykaz}></Info>
         </main>
         <footer className="footer">
-          <h2>Wykonanie Andrzej Jaworski</h2>
+          <a href="https://andrzej.netlify.app/">
+            <h2>Wykonanie Andrzej Jaworski</h2>
+          </a>
         </footer>
       </div>
       <Background></Background>
