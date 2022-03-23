@@ -79,7 +79,7 @@ export default function Home({
         </main>
         <footer className="footer">
           <h2>
-            <a href="https://andrzej.netlify.app/">
+            <a href="https://andrzej.netlify.app/" target="_blank">
               Wykonanie Andrzej Jaworski
             </a>
           </h2>
