@@ -138,6 +138,6 @@ export async function getStaticProps() {
       slajdy: strapi9.data,
       opis: strapi10.data,
     },
-    revalidate: 30,
+    revalidate: 10,
   };
 }
