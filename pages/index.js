@@ -92,41 +92,83 @@ export default function Home({
 }
 export async function getStaticProps() {
   const res1 = await fetch(
-    "https://szkolaspoleczna.herokuapp.com/api/rekrutacja?populate=*"
+    `${
+      process.env.DEVELOPMENT_BACKEND_HOST
+        ? process.env.DEVELOPMENT_BACKEND_HOST
+        : process.env.PRODUCTION_BACKEND_HOST
+    }/api/rekrutacja?populate=*`
   );
   const strapi1 = await res1.json();
   const res2 = await fetch(
-    "https://szkolaspoleczna.herokuapp.com/api/podstawowa?populate=*"
+    `${
+      process.env.DEVELOPMENT_BACKEND_HOST
+        ? process.env.DEVELOPMENT_BACKEND_HOST
+        : process.env.PRODUCTION_BACKEND_HOST
+    }/api/podstawowa?populate=*`
   );
   const strapi2 = await res2.json();
   const res3 = await fetch(
-    "https://szkolaspoleczna.herokuapp.com/api/liceum?populate=*"
+    `${
+      process.env.DEVELOPMENT_BACKEND_HOST
+        ? process.env.DEVELOPMENT_BACKEND_HOST
+        : process.env.PRODUCTION_BACKEND_HOST
+    }/api/liceum?populate=*`
   );
   const strapi3 = await res3.json();
   const res4 = await fetch(
-    "https://szkolaspoleczna.herokuapp.com/api/aktualnoscis?sort[0]=data:desc&populate=*&"
+    `${
+      process.env.DEVELOPMENT_BACKEND_HOST
+        ? process.env.DEVELOPMENT_BACKEND_HOST
+        : process.env.PRODUCTION_BACKEND_HOST
+    }/api/aktualnoscis?sort[0]=data:desc&populate=*&`
   );
   const strapi4 = await res4.json();
   const res5 = await fetch(
-    "https://szkolaspoleczna.herokuapp.com/api/galeries?sort[0]=createdAt:desc&populate=*"
+    `${
+      process.env.DEVELOPMENT_BACKEND_HOST
+        ? process.env.DEVELOPMENT_BACKEND_HOST
+        : process.env.PRODUCTION_BACKEND_HOST
+    }/api/galeries?sort[0]=createdAt:desc&populate=*`
   );
   const strapi5 = await res5.json();
   const res6 = await fetch(
-    "https://szkolaspoleczna.herokuapp.com/api/technikum?populate=*"
+    `${
+      process.env.DEVELOPMENT_BACKEND_HOST
+        ? process.env.DEVELOPMENT_BACKEND_HOST
+        : process.env.PRODUCTION_BACKEND_HOST
+    }/api/technikum?populate=*`
   );
   const strapi6 = await res6.json();
-  const res7 = await fetch("https://szkolaspoleczna.herokuapp.com/api/kontakt");
+  const res7 = await fetch(
+    `${
+      process.env.DEVELOPMENT_BACKEND_HOST
+        ? process.env.DEVELOPMENT_BACKEND_HOST
+        : process.env.PRODUCTION_BACKEND_HOST
+    }/api/kontakt`
+  );
   const strapi7 = await res7.json();
   const res8 = await fetch(
-    "https://szkolaspoleczna.herokuapp.com/api/wykaz-podrecznikow?populate=*"
+    `${
+      process.env.DEVELOPMENT_BACKEND_HOST
+        ? process.env.DEVELOPMENT_BACKEND_HOST
+        : process.env.PRODUCTION_BACKEND_HOST
+    }/api/wykaz-podrecznikow?populate=*`
   );
   const strapi8 = await res8.json();
   const res9 = await fetch(
-    "https://szkolaspoleczna.herokuapp.com/api/slajdies?sort[0]=id"
+    `${
+      process.env.DEVELOPMENT_BACKEND_HOST
+        ? process.env.DEVELOPMENT_BACKEND_HOST
+        : process.env.PRODUCTION_BACKEND_HOST
+    }/api/slajdies?sort[0]=id`
   );
   const strapi9 = await res9.json();
   const res10 = await fetch(
-    "https://szkolaspoleczna.herokuapp.com/api/opis-szkoly?populate=*"
+    `${
+      process.env.DEVELOPMENT_BACKEND_HOST
+        ? process.env.DEVELOPMENT_BACKEND_HOST
+        : process.env.PRODUCTION_BACKEND_HOST
+    }/api/opis-szkoly?populate=*`
   );
   const strapi10 = await res10.json();
   return {
@@ -142,6 +184,6 @@ export async function getStaticProps() {
       slajdy: strapi9.data,
       opis: strapi10.data,
     },
-    revalidate: 10,
+    revalidate: 3,
   };
 }
